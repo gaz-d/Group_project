@@ -28,7 +28,7 @@ public void setup()
 
 	public void settings()
 	{
-	    size(850,850);
+	    size(900, 900);   
 	
 	}//end settings
 
