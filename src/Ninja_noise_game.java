@@ -42,12 +42,13 @@ public void setup()
 	        
 	       
 	        
-	        
+	        //for statement to read in values generated from the users microphone.
 	        for(int i = 0 ; i < audioInput.bufferSize() ; i ++)
 	        {
 	         
 	            
-	        	if (audioInput.left.get(i) > 0) // if statement set to accept values over zero so the sprite will not move downwards.
+	        	if (audioInput.left.get(i) > 0) 
+	      // if statement set to accept values over zero so the sprite will not move downwards.
 	        	{
 	        	
 		        	average +=  audioInput.left.get(i);
@@ -75,14 +76,12 @@ public void setup()
 	        if   ( average  <= 7.1848355E-8)
 	        {
 	        	image(run, width- 600 ,height/2 - x, 120, 120 );
-	        }// if statement to make the ninja run when its at a certain height 
+	        }// if statement to make the ninja run when the user is not making noise
+	        //(ie meaning they dont want the character to jump )
 	     
 	  
 	    }//end draw function
 	        
-
-
-
 
 
 	public static void main(String[] args) {
@@ -92,4 +91,4 @@ public void setup()
 
 	}
 
-}
+}//end class 
