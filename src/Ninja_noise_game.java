@@ -19,8 +19,8 @@ float x = 0;
 
 public void setup()
 	{	
-		run = loadImage("ninja.png");
-		jump = loadImage("ninja_jump.png");
+		run = loadImage("ninja.png");//image for when the ninja is on a platform .
+		jump = loadImage("ninja_jump.png");//image for when the ninja is in the air (jumping)
 	    minim = new Minim(this);
 	  
 	    audioInput = minim.getLineIn(Minim.STEREO, width, 44100, 16);
@@ -62,12 +62,13 @@ public void setup()
 		        //lerp function makes the movement of the ninja smooth
 
 	            
-		     
-	        }
+	        }//end for 
 	        
 	       
-	       println(average);
-	        
+	       println(average);//used for testing values
+	       
+	       
+	      
 	        image(jump, width- 600 ,height/2 - x, 120, 120 );
 	     
 	  
