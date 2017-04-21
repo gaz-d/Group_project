@@ -36,7 +36,23 @@ public void setup()
 	 
   
 
+ public void draw()
+	  {
+	        background(0);
+	        stroke(0,255,0,128); 
+	        float average = 0;
+	        
+	        float mid = height / 2.0f;
+	        
+	        
+	        for(int i = 0 ; i < audioInput.bufferSize() ; i ++)
+	        {
+	           line(i, mid + audioInput.left.get(i) , i, mid + audioInput.left.get(i) * mid);
+	            average +=  audioInput.left.get(i);
+	            average /=  audioInput.bufferSize();
 
+	        }
+	    }
 
 
 
