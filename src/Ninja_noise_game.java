@@ -69,6 +69,8 @@ public void setup()
 	       
 	      
 	        image(jump, width- 600 ,height/2 -x , 120, 120 );
+	        //this is the image to be displayed when the ninja is jumping
+	        //(ie. when the user is making noise for the character to jump)
 	        
 	        if   ( average  <= 7.1848355E-8)
 	        {
