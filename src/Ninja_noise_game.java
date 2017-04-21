@@ -20,7 +20,7 @@ float x = 0;
 public void setup()
 	{	
 		run = loadImage("ninja.png");
-		jump = loadImage("ninja_run.png");
+		jump = loadImage("ninja_jump.png");
 	    minim = new Minim(this);
 	  
 	    audioInput = minim.getLineIn(Minim.STEREO, width, 44100, 16);
@@ -42,7 +42,7 @@ public void setup()
 	        stroke(0,255,0,128); 
 	        float average = 0;
 	        
-	        float mid = height / 2.0f;
+	       
 	        
 	        
 	        for(int i = 0 ; i < audioInput.bufferSize() ; i ++)
@@ -68,7 +68,7 @@ public void setup()
 	       
 	       println(average);
 	        
-	        image(run, width- 600 ,height/2 - x, 120, 120 );
+	        image(jump, width- 600 ,height/2 - x, 120, 120 );
 	     
 	  
 	    }//end draw function
