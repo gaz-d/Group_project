@@ -1,6 +1,4 @@
-//Importing minim Library so microphone features can be used 
-
-
+//Importing minim Library so microphone features can be used.
 import ddf.minim.AudioInput;
 import ddf.minim.Minim;
 import processing.core.PApplet;
@@ -23,7 +21,7 @@ public void setup()
 		jump = loadImage("ninja_jump.png");//image for when the ninja is in the air (jumping)
 	    minim = new Minim(this);
 	  
-	    audioInput = minim.getLineIn(Minim.STEREO, width, 44100, 16);
+	    audioInput = minim.getLineIn(Minim.STEREO, width, 44100, 16);// sampled at CD quality .
 	}//end setup
 
 
@@ -68,8 +66,14 @@ public void setup()
 	       println(average);//used for testing values
 	       
 	       
+	       
 	      
-	        image(jump, width- 600 ,height/2 - x, 120, 120 );
+	        image(jump, width- 600 ,height/2 -x , 120, 120 );
+	        
+	        if   ( average  <= 7.1848355E-8)
+	        {
+	        	image(run, width- 600 ,height/2 - x, 120, 120 );
+	        }// if statement to make the ninja run when its at a certain height 
 	     
 	  
 	    }//end draw function
