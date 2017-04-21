@@ -47,15 +47,15 @@ public void setup()
 	        
 	        for(int i = 0 ; i < audioInput.bufferSize() ; i ++)
 	        {
-	          // line(i, mid + audioInput.left.get(i) , i, mid + audioInput.left.get(i) * mid);
+	         
 	            
 	        	if (audioInput.left.get(i) > 0)
 	        	{
 	        	
-	        	average +=  audioInput.left.get(i);
-	            average /=  audioInput.bufferSize();
-	            
-	        	}
+		        	average +=  audioInput.left.get(i);
+		            average /=  audioInput.bufferSize();
+		            
+	        	}//end if 
 	        	
 	        	
 		        x = lerp(x , average * 1000000, (float) .00009);
@@ -69,14 +69,9 @@ public void setup()
 	       println(average);
 	        
 	        image(run, width- 600 ,height/2 - x, 120, 120 );
-	        
-	        
-
-	        
-	      
-	        
+	     
 	  
-	    }
+	    }//end draw function
 	        
 
 
