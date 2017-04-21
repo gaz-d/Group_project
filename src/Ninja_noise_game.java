@@ -49,7 +49,7 @@ public void setup()
 	        {
 	         
 	            
-	        	if (audioInput.left.get(i) > 0)
+	        	if (audioInput.left.get(i) > 0) // if statement set to accept values over zero so the sprite will not move downwards.
 	        	{
 	        	
 		        	average +=  audioInput.left.get(i);
@@ -73,11 +73,6 @@ public void setup()
 	  
 	    }//end draw function
 	        
-
-
-
-
-
 
 
 
